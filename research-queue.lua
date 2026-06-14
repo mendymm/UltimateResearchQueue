@@ -488,7 +488,9 @@ function research_queue.update_active_research(self)
     local current_research = self.force.current_research
     if not current_research or head.technology.name ~= current_research.name then
       self.updating_active_research = true
-      self.force.cancel_current_research()
+      if current_research then
+        self.force.cancel_current_research()
+      end
       self.force.add_research(head.technology)
       self.updating_active_research = false
       self.force_table.last_research_progress = flib_technology.get_research_progress(head.technology, head.level)

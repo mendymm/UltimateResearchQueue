@@ -50,6 +50,8 @@ styles.urq_technology_slot_duration_label = {
   height = 70,
   left_padding = 4,
   vertical_align = "bottom",
+  font_color = {1, 1, 1},
+  parent_hovered_font_color = {1, 1, 1},
 }
 
 styles.urq_tech_list_scroll_pane = {

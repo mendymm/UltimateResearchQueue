@@ -193,6 +193,8 @@ script.on_event(defines.events.on_research_finished, function(e)
     research_queue.remove(force_table.queue, technology, level, true)
   end
 
+  research_queue.update_active_research(force_table.queue)
+
   util.schedule_force_update(force)
 end)
 
